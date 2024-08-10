@@ -1,11 +1,13 @@
 package com.thecodeproject.`in`.safezone.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.thecodeproject.`in`.safezone.databinding.FragmentAlertBinding
+import com.thecodeproject.`in`.safezone.disasters.EarthquakeActivity
 
 class AlertFragment : Fragment() {
 
@@ -18,7 +20,7 @@ class AlertFragment : Fragment() {
     ): View {
         binding = FragmentAlertBinding.inflate(layoutInflater)
 
-
+        binding.cvEarthquakes.setOnClickListener { startActivity(Intent(context, EarthquakeActivity::class.java)) }
 
         return binding.root
     }
