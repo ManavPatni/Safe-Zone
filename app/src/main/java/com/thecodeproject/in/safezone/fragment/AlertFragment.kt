@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.thecodeproject.`in`.safezone.databinding.FragmentAlertBinding
 import com.thecodeproject.`in`.safezone.disasters.EarthquakeActivity
+import com.thecodeproject.`in`.safezone.disasters.FloodActivity
 
 class AlertFragment : Fragment() {
 
@@ -21,6 +22,7 @@ class AlertFragment : Fragment() {
         binding = FragmentAlertBinding.inflate(layoutInflater)
 
         binding.cvEarthquakes.setOnClickListener { startActivity(Intent(context, EarthquakeActivity::class.java)) }
+        binding.cvFloods.setOnClickListener { startActivity(Intent(context, FloodActivity::class.java)) }
 
         return binding.root
     }

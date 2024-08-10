@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id ("com.google.gms.google-services")
 }
 
 android {
@@ -47,9 +48,20 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.play.services.location)
+    implementation(libs.androidx.work.runtime.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //Firebase
+    implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
+    implementation("com.google.firebase:firebase-analytics")
+    //Firebase Auth
+    implementation ("com.google.firebase:firebase-auth-ktx:23.0.0")
+
+    //Google Play Services
+    //Google Auth
+    implementation ("com.google.android.gms:play-services-auth:21.2.0")
 
     //lottie
     implementation("com.airbnb.android:lottie:6.5.0")
@@ -67,5 +79,11 @@ dependencies {
 
     //coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+
+    //chart
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+    //country picker
+    implementation("com.hbb20:ccp:2.7.3")
 
 }

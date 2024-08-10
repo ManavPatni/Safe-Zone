@@ -6,15 +6,11 @@ import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Bundle
 import android.view.View
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
-import com.thecodeproject.`in`.safezone.R
 import com.thecodeproject.`in`.safezone.TimelineDecoration
 import com.thecodeproject.`in`.safezone.adapter.EarthquakeAdapter
 import com.thecodeproject.`in`.safezone.databinding.ActivityEarthquakeBinding
@@ -64,8 +60,16 @@ class EarthquakeActivity : AppCompatActivity() {
     }
 
     private fun checkLocationPermissions() {
-        if (ActivityCompat.checkSelfPermission(this, ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, arrayOf(ACCESS_FINE_LOCATION), LOCATION_PERMISSION_REQUEST_CODE)
+        if (ActivityCompat.checkSelfPermission(
+                this,
+                ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(ACCESS_FINE_LOCATION),
+                LOCATION_PERMISSION_REQUEST_CODE
+            )
         } else {
             getLocation()
         }
@@ -105,9 +109,19 @@ class EarthquakeActivity : AppCompatActivity() {
         val startTime = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(calendar.time)
         val maxRadiusKm = 100.0
 
-        earthquakeApiService.getEarthquakes(format, startTime, endTime, latitude, longitude, maxRadiusKm).enqueue(object :
+        earthquakeApiService.getEarthquakes(
+            format,
+            startTime,
+            endTime,
+            latitude,
+            longitude,
+            maxRadiusKm
+        ).enqueue(object :
             Callback<EarthquakeResponse> {
-            override fun onResponse(call: Call<EarthquakeResponse>, response: Response<EarthquakeResponse>) {
+            override fun onResponse(
+                call: Call<EarthquakeResponse>,
+                response: Response<EarthquakeResponse>
+            ) {
                 response.body()?.let {
                     binding.earthquakeRecyclerView.adapter = EarthquakeAdapter(it.features)
                 }
@@ -120,6 +134,7 @@ class EarthquakeActivity : AppCompatActivity() {
             }
         })
     }
+
 
     companion object {
         private const val LOCATION_PERMISSION_REQUEST_CODE = 1

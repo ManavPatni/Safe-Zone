@@ -22,10 +22,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.thecodeproject.in.safezone" />
+                  <option name="mobileSdkAppId" value="1:619738452403:android:e7e78dd0f7f1266819bbc6" />
+                  <option name="projectId" value="safe-zone-832d3" />
+                  <option name="projectNumber" value="619738452403" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
