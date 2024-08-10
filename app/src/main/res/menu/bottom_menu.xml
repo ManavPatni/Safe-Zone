@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bni_home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/bni_DisasterGuide"
+        android:title="Disaster Guide"
+        android:icon="@drawable/ic_guide"/>
+
+    <item
+        android:id="@+id/bni_alert"
+        android:title="Alert"
+        android:icon="@drawable/ic_alert"/>
+
+    <item
+        android:id="@+id/bni_profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_user"/>
+
+</menu>
