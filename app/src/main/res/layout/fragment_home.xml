@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_tempDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/tv_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:text="27\u00B0"
+                    android:textSize="@dimen/_35ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_tempMinMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="27\u00B0 / 28\u00B0"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_temp"
+                    app:layout_constraintTop_toTopOf="@+id/tv_temp" />
+
+                <TextView
+                    android:id="@+id/tv_tempDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mostly Cloudy"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_tempMinMax"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_tempMinMax" />
+
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:src="@drawable/ic_cloudy"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_otherDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_gravity="center_horizontal">
+
+                <!--Humidity-->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_humidity"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/iv_humidity"
+                            android:layout_width="@dimen/_23sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:src="@drawable/ic_humidity"
+                            android:layout_centerHorizontal="true"/>
+
+                        <TextView
+                            android:id="@+id/tv_humidity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Humidity"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_11ssp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/iv_humidity"/>
+
+                        <TextView
+                            android:id="@+id/tv_humidityValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="64"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/tv_humidity"
+                            android:layout_marginTop="@dimen/_5sdp"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--Visibility-->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_visibility"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginStart="@dimen/_10sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/iv_Visibility"
+                            android:layout_width="@dimen/_23sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:src="@drawable/ic_visibility"
+                            android:layout_centerHorizontal="true"/>
+
+                        <TextView
+                            android:id="@+id/tv_visibility"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Visibility"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_11ssp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/iv_Visibility"/>
+
+                        <TextView
+                            android:id="@+id/tv_visibilityValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="64"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/tv_visibility"
+                            android:layout_marginTop="@dimen/_5sdp"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--Sea level-->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_seaLevel"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginStart="@dimen/_10sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/iv_seaLevel"
+                            android:layout_width="@dimen/_23sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:src="@drawable/ic_water_level"
+                            android:layout_centerHorizontal="true"/>
+
+                        <TextView
+                            android:id="@+id/tv_seaLevel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sea Level"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_11ssp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/iv_seaLevel"/>
+
+                        <TextView
+                            android:id="@+id/tv_seaLevelValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="64"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/tv_seaLevel"
+                            android:layout_marginTop="@dimen/_5sdp"/>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_callSOS"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="wrap_content"
+                android:text="Call SOS"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_12ssp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/button_danger_outline"
+                android:drawableStart="@drawable/ic_call"
+                android:drawableEnd="@drawable/ic_arrow_right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weather News"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15ssp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_10sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                tools:listitem="@layout/item_weather_news"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
