@@ -138,6 +138,7 @@ class SignInActivity : AppCompatActivity() {
     private fun setupProfile() {
         authSharedPref.setUserName(binding.etUserName.text.toString())
         authSharedPref.setCountry(binding.countryCode.selectedCountryName.toString())
+        authSharedPref.setCountryCode(binding.countryCode.selectedCountryCode.toString())
         pd.show()
         exit()
     }

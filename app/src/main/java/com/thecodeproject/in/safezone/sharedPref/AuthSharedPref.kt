@@ -43,4 +43,12 @@ class AuthSharedPref (private val context: Context) {
         return sharedPreferences.getString("country", null)
     }
 
+    fun setCountryCode(countryCode: String) {
+        sharedPreferences.edit().putString("countryCode", countryCode).apply()
+    }
+
+    fun countryCode(): String? {
+        return sharedPreferences.getString("countryCode", null)
+    }
+
 }

@@ -62,7 +62,6 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
-
         binding.bnv.setOnItemSelectedListener {
             when (it.toString()) {
                 "Home" -> {
