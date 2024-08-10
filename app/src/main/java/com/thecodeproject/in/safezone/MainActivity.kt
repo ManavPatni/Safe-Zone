@@ -22,7 +22,6 @@ import com.thecodeproject.`in`.safezone.databinding.ActivityMainBinding
 import com.thecodeproject.`in`.safezone.fragment.AlertFragment
 import com.thecodeproject.`in`.safezone.fragment.HomeFragment
 import com.thecodeproject.`in`.safezone.models.EarthquakeResponse
-import com.thecodeproject.`in`.safezone.network.EarthquakeApiService
 import com.thecodeproject.`in`.safezone.sharedPref.AuthSharedPref
 import retrofit2.Call
 import retrofit2.Callback

@@ -1,54 +1,36 @@
 package com.thecodeproject.`in`.safezone.models
 
-/*data class EarthquakeResponse(
-    val features: List<Feature>
-)
-
-data class Feature(
-    val properties: Properties
-)
-
-data class Properties(
-    val mag: Double,
-    val place: String,
-    val time: Long
-)*/
-
-// Data class for the entire response
-data class EarthquakeResponse(
+data class ForestFireResponse(
     val type: String,
-    val features: List<Feature>
+    val features: List<FFRFeature>
 )
 
-// Data class for each feature
-data class Feature(
+data class FFRFeature(
     val type: String,
     val bbox: List<Double>,
-    val geometry: Geometry,
-    val properties: Properties
+    val geometry: FFRGeometry,
+    val properties: FFRProperties
 )
 
-// Data class for geometry details
-data class Geometry(
+data class FFRGeometry(
     val type: String,
     val coordinates: List<Double>
 )
 
-// Data class for event properties
-data class Properties(
+data class FFRProperties(
     val eventtype: String,
     val eventid: Int,
     val episodeid: Int,
-    val eventname: String?,
-    val glide: String?,
+    val eventname: String,
+    val glide: String,
     val name: String,
     val description: String,
     val htmldescription: String,
     val icon: String,
     val iconoverall: String,
-    val url: Url,
+    val url: Urls,
     val alertlevel: String,
-    val alertscore: Double,
+    val alertscore: Int,
     val episodealertlevel: String,
     val episodealertscore: Double,
     val istemporary: String,
@@ -59,28 +41,25 @@ data class Properties(
     val datemodified: String,
     val iso3: String,
     val source: String,
-    val sourceid: String?,
+    val sourceid: String,
     val polygonlabel: String,
-    val `class`: String,
-    val affectedcountries: List<AffectedCountry>,
-    val severitydata: SeverityData
+    val Class: String,
+    val affectedcountries: List<FFRAffectedCountry>,
+    val severitydata: FFRSeverityData
 )
 
-// Data class for URLs in properties
-data class Url(
+data class Urls(
     val geometry: String,
     val report: String,
     val details: String
 )
 
-// Data class for affected countries
-data class AffectedCountry(
+data class FFRAffectedCountry(
     val iso3: String,
     val countryname: String
 )
 
-// Data class for severity data
-data class SeverityData(
+data class FFRSeverityData(
     val severity: Double,
     val severitytext: String,
     val severityunit: String

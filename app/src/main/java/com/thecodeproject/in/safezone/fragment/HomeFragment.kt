@@ -68,7 +68,7 @@ class HomeFragment : Fragment() {
                 binding.tvTemp.text = "${response.main.temp}\u00B0"
                 binding.tvHumidityValue.text = response.main.humidity.toString()
                 binding.tvVisibilityValue.text = response.visibility.toString()
-                binding.tvSeaLevel.text = response.main.sea_level.toString()
+                binding.tvSeaLevelValue.text = response.main.sea_level.toString()
 
             } catch (e: Exception) {
                 Snackbar.make(binding.main, e.message.toString(), Snackbar.LENGTH_SHORT).show()
