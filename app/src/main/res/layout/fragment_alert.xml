@@ -115,7 +115,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/bg_landslide"
+                    android:src="@drawable/bg_wildefire"
                     android:scaleType="centerCrop"
                     android:tint="#80000000"/>
 
@@ -144,7 +144,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/bg_landslide"
+                    android:src="@drawable/bg_flood"
                     android:scaleType="centerCrop"
                     android:tint="#80000000"/>
 
