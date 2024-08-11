@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.thecodeproject.`in`.safezone.R
 import com.thecodeproject.`in`.safezone.models.Feature
@@ -18,7 +19,7 @@ import com.thecodeproject.`in`.safezone.models.FFRFeature
 class ForestFireAdapter(private val context: Context, private val forestFireList: List<FFRFeature>) : RecyclerView.Adapter<ForestFireAdapter.ForestFireViewHolder>() {
 
     class ForestFireViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val llFireDetails: LinearLayout = view.findViewById(R.id.ll_fireDetail)
+        val llFireDetails: ConstraintLayout = view.findViewById(R.id.cl_fireDetail)
         val nameTextView: TextView = view.findViewById(R.id.nameTextView)
         val descriptionTextView: TextView = view.findViewById(R.id.descriptionTextView)
         val severityTextView: TextView = view.findViewById(R.id.severityTextView)
