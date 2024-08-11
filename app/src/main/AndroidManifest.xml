@@ -17,6 +17,9 @@
         android:theme="@style/Theme.SafeZone"
         tools:targetApi="31">
         <activity
+            android:name=".disasters.DisasterGuideActivity"
+            android:exported="false" />
+        <activity
             android:name=".disasters.ForestFireActivity"
             android:exported="false" />
         <activity

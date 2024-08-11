@@ -48,7 +48,7 @@ class HomeFragment : Fragment() {
 
         binding.btnCallSOS.setOnClickListener {
             val intent = Intent(Intent.ACTION_DIAL).apply {
-                data = Uri.parse("tel:101")
+                data = Uri.parse("tel:1916")
             }
             context?.startActivity(intent)
         }
