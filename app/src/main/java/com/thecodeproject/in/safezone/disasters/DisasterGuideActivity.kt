@@ -1,6 +1,7 @@
 package com.thecodeproject.`in`.safezone.disasters
 
 import android.os.Bundle
+import android.view.View
 import android.webkit.WebSettings
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
@@ -13,8 +14,16 @@ class DisasterGuideActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Enable full-screen mode
+        window.decorView.systemUiVisibility = (
+                View.SYSTEM_UI_FLAG_FULLSCREEN
+                        or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                )
         binding = ActivityDisasterGuideBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val url = intent.getStringExtra("url")
 
         val webSettings: WebSettings = binding.webView.settings
         webSettings.javaScriptEnabled = true
@@ -34,7 +43,7 @@ class DisasterGuideActivity : AppCompatActivity() {
         binding.webView.webViewClient = WebViewClient()
 
         // Load the URL
-        binding.webView.loadUrl("https://www.ready.gov/kids/games/data/dm-english/index.html")
+        binding.webView.loadUrl(url!!)
 
     }
 }

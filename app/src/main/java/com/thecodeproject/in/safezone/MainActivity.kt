@@ -11,6 +11,7 @@ import com.thecodeproject.`in`.safezone.auth.SignInActivity
 import com.thecodeproject.`in`.safezone.databinding.ActivityMainBinding
 import com.thecodeproject.`in`.safezone.disasters.DisasterGuideActivity
 import com.thecodeproject.`in`.safezone.fragment.AlertFragment
+import com.thecodeproject.`in`.safezone.fragment.DisasterGuideFragment
 import com.thecodeproject.`in`.safezone.fragment.HomeFragment
 import com.thecodeproject.`in`.safezone.sharedPref.AuthSharedPref
 
@@ -50,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(HomeFragment())
                 }
                 "Disaster Guide" -> {
-                    startActivity(Intent(this, DisasterGuideActivity::class.java))
+                    replaceFragment(DisasterGuideFragment())
                 }
                 "Alert" -> {
                     replaceFragment(AlertFragment())

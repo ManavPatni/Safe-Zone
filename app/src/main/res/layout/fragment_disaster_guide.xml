@@ -136,7 +136,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cv_homeFire"
+                android:id="@+id/cv_Hurricane"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_100sdp"
                 android:layout_marginStart="@dimen/_20sdp"
@@ -163,8 +163,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_20sdp"
-                        android:text="Level 3 - Home Fire"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="Level 3 - Hurricane/\nBlackout"
                         android:textSize="@dimen/_15ssp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/imageView_homeFire"
